@@ -1,0 +1,165 @@
+/* Corpo da página */
+body {
+    font-family: 'Sora', Arial, sans-serif;
+    background: linear-gradient(135deg, #0b4026, #18a86b 50%, #0b4026);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contêiner principal */
+.content {
+    width: 100%;
+    max-width: 1200px; /* Maior largura para telas grandes */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2rem;
+    color: #0b4026;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #0b4026;
+    margin-bottom: 15px;
+}
+
+/* Seção do formulário */
+.form-section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr; /* Exibição em coluna única */
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+form label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button {
+    background-color: #18a86b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0b4026;
+}
+
+/* Botão de ação */
+button.delete-item {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+button.delete-item:hover {
+    background-color: #c9302c;
+}
+
+/* Área de exibição (Estoque e Máquinas) */
+#estoque-display,
+#machine-display {
+    padding: 20px;
+    border: 2px solid #18a86b;
+    border-radius: 12px;
+    background-color: #e6ffe6;
+    margin-top: 20px;
+}
+
+#estoque-list,
+#machines-list {
+    display: flex;
+    flex-wrap: wrap; /* Quebra de linha para itens */
+    gap: 20px; /* Espaçamento entre itens */
+    justify-content: flex-start; /* Alinha itens à esquerda */
+}
+
+/* Estilo para os itens exibidos */
+.estoque-item,
+.machine-item {
+    flex: 1 1 calc(25% - 20px); /* Ocupa até 25% da largura disponível */
+    min-width: 200px;
+    max-width: 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Layout interno em coluna */
+    justify-content: space-between;
+}
+
+.estoque-item p,
+.machine-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Estilo adicional para preços ou detalhes */
+.machine-item p strong {
+    color: #0b4026;
+}
+
+.estoque-item:last-child,
+.machine-item:last-child {
+    border-bottom: none;
+}
+
+/* Mensagem quando não há itens */
+#estoque-list p,
+#machines-list p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .estoque-item,
+    .machine-item {
+        flex: 1 1 calc(50% - 20px); /* Ocupa 50% em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .estoque-item,
+    .machine-item {
+        flex: 1 1 100%; /* Ocupa 100% em telas muito pequenas */
+    }
+}

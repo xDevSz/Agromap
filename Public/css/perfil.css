@@ -1,0 +1,115 @@
+/* Estilização do Container Principal */
+.perfil-box {
+    display: flex;
+    flex-direction: row-reverse; /* Alinha a foto e o formulário lado a lado */
+    gap: 20px; /* Espaçamento entre a foto e o formulário */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Foto de Perfil */
+.foto-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo no eixo horizontal */
+    gap: 10px;
+}
+
+/* Ajustar a Imagem */
+.foto-perfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Label do Botão de Upload */
+.foto-perfil label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #043309;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.foto-perfil label:hover {
+    background-color: #e2c106;
+}
+
+/* Ocultar Input de Upload */
+.foto-perfil input[type="file"] {
+    display: none;
+}
+
+/* Informações e Formulário */
+.info-e-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.info-perfil p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #043309;
+}
+
+.form-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: black;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #043309;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus {
+    border-color: #18a86b;
+}
+
+.btn-salvar {
+    width: 100%;
+    padding: 12px;
+    background-color: #18a86b;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-salvar:hover {
+    background-color: #0b4026;
+}
+
+.dentro{
+    color: black;
+}

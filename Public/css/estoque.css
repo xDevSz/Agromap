@@ -1,0 +1,105 @@
+/* Container do estoque */
+.estoque-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    max-width: 1800px;
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas principais */
+    column-gap: 20px; /* Espaço horizontal entre as colunas */
+    row-gap: 20px; /* Espaço vertical entre os campos */
+    margin-bottom: 30px;
+    align-items: center; /* Alinha os campos verticalmente */
+    text-align: left;
+}
+
+/* Labels */
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px; /* Espaço entre o label e o campo */
+}
+
+/* Inputs, selects e botões */
+form input, form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px; /* Altura uniforme */
+}
+
+/* Botão */
+form button {
+    background-color: #18a86b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    grid-column: span 2; /* Botão ocupa a largura de duas colunas */
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0b4026;
+}
+
+/* Área de exibição */
+#estoque-display {
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: row; /* Garante que os itens sejam exibidos em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: stretch; /* Garante que os itens tenham a mesma altura (opcional) */
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Itens exibidos */
+.estoque-item {
+    flex: 1 1 calc(25% - 20px); /* Cada item ocupa 25% do espaço disponível com margem */
+    min-width: 220px; /* Define uma largura mínima para responsividade */
+    max-width: 300px; /* Define uma largura máxima */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Elementos internos ainda em coluna */
+    justify-content: space-between; /* Espaça o conteúdo interno */
+    text-align: left; /* Alinha o texto dentro dos itens à esquerda */
+}
+
+/* Botão dentro dos itens */
+.estoque-item button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end; /* Alinha o botão à direita */
+}
+
+.estoque-item button:hover {
+    background-color: #c9302c;
+}
+

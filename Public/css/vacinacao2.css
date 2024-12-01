@@ -1,0 +1,124 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Garante que o fundo ocupa toda a altura da tela */
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.137); /* Altere para o mesmo fundo do CSS original */
+    padding: 0; /* Remove qualquer padding extra */
+}
+
+
+/* Contêiner principal */
+.vacina-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+}
+
+/* Remoção de bordas e áreas extras */
+.vacina-container {
+    border: none; /* Remove bordas indesejadas */
+    margin: 0; /* Remove margens */
+    overflow: hidden; /* Garante que apenas o conteúdo dentro seja visível */
+}
+
+/* Formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.formulario h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.confirmar {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirmar:hover {
+    background-color: #218838;
+}
+
+/* Área de visualização */
+/* Área de visualização */
+.visualizacao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visualizacao h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px; /* Arredonda os cantos da tabela */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona leve destaque */
+}
+
+table thead th {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+table tbody tr:last-child td {
+    border-bottom: none; /* Remove a borda inferior da última linha */
+}
+
+table tbody tr:hover {
+    background-color: #f2f2f2;
+}

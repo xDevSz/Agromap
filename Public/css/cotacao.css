@@ -1,0 +1,35 @@
+/* Estilo para o container da cotação */
+.cotacao-container {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 16px; /* Bordas arredondadas */
+    padding: 40px 30px; /* Aumenta o espaçamento interno */
+    max-width: 700px; /* Largura máxima maior */
+    margin: 0 auto; /* Centraliza o container */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do texto dentro do container */
+.cotacao-container p {
+    font-size: 1.5rem; /* Tamanho maior da fonte */
+    line-height: 1.8; /* Maior espaçamento entre linhas */
+    color: #181818; /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estilo do botão "Voltar" */
+.btn-voltar {
+    background-color: #18a86b; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto */
+    padding: 12px 25px; /* Botão maior */
+    border: none; /* Remove borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor pointer para indicar clique */
+    font-size: 1.2rem; /* Tamanho maior da fonte */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.btn-voltar:hover {
+    background-color: #0b4026; /* Cor do botão ao passar o mouse */
+}

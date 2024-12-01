@@ -1,0 +1,108 @@
+/* Contêiner principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 1400px; /* Maior largura permitida */
+    margin: 50px auto; /* Mais espaçamento vertical */
+}
+
+/* Barra branca envolvendo tudo */
+.grafico-area {
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 20px; /* Cantos mais arredondados */
+    padding: 50px; /* Mais espaço interno */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+    width: 100%;
+    max-width: 1200px; /* Permitir uma área ainda maior */
+    color: black; /* Texto geral na área branca */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 40px; /* Espaçamento maior entre elementos */
+    align-items: center;
+}
+
+/* Gráfico */
+.grafico {
+    width: 300px; /* Aumentar o tamanho do gráfico */
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #28a745 0% 31%,
+        #dc3545 31% 68%,
+        #fbff00 68% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.grafico-titulo {
+    position: absolute;
+    font-size: 1.5rem; /* Aumentar o título do gráfico */
+    font-weight: bold;
+    color: #000;
+}
+
+.legenda {
+    font-size: 1rem; /* Aumentar o texto da legenda */
+    color: black;
+}
+
+.legenda span {
+    display: inline-block;
+    width: 16px; /* Indicadores de cor maiores */
+    height: 16px;
+    margin-right: 10px;
+}
+
+/* Formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Maior espaçamento entre campos */
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre rótulo e input */
+}
+
+.campo label {
+    font-size: 1.2rem; /* Aumentar o tamanho dos rótulos */
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.confirmar {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirmar:hover {
+    background-color: #218838;
+}
+
+/* Alinhamento específico para botões */
+.formulario .botao-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px; /* Espaço acima do botão */
+}

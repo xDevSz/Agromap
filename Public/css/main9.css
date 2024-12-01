@@ -1,0 +1,273 @@
+/* Geral */
+/* Gradiente inspirado na imagem */
+body {
+    font-family: 'Sora', Arial, sans-serif;
+    background: linear-gradient(135deg, #0b4026, #18a86b 50%, #0b4026);
+    color: #181818;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Efeito de suavização */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(23, 255, 192, 0.6), transparent 10%);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  
+  body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle at 70% 70%, rgba(0, 255, 127, 0.4), transparent 10%);
+    z-index: -1;
+    opacity: 0.5;
+  }
+  
+  p{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #181818;
+  }
+  h3{
+    padding-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-left: 20px;
+  }
+  span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 20px;
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: 5%;
+    margin-top: 1%;
+    padding: 10px;
+  }
+  .content {
+    margin-top: 100px;
+  }
+  
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 13vh;
+    z-index: 100;
+  }
+  
+  /*LOGO*/
+  .header-image {
+    max-width: 150px;
+    height: auto; 
+    position: fixed;
+    top: 6%;
+    left: 3.4%;
+    z-index: 10;
+  }
+  img {
+    max-width: 900px; 
+    width: 50vw;
+    height: auto; 
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  .header-text {
+    position: fixed;
+    top: 7%;
+    left: 5%;
+    font-size: 1.175rem;
+    font-weight: 600;
+    color: #000000;
+    z-index: 10;
+  }
+  
+  /* Barra de pesquisa centralizada */
+  .pesquisa-header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 100px;
+  }
+  .barra-pesquisa {
+    width: 75%;
+    max-width: 550px;
+    padding: 15px 25px 15px 50px;
+    border: 1px solid #C3D4E966;
+    border-radius: 1000px;
+    font-size: 0.9rem;
+    color: #000000;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .icone-lupa {
+    position: relative;
+    left: 35px;
+    top: 24.5px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+  }
+  .barra-pesquisa:placeholder {
+    color: #2a3953;
+  }
+  
+  /* Ícones do header */
+  .botoes-header {
+    display: flex;
+    gap: 15px;
+    padding-right: 30px;
+  }
+  .btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  .icone-btn,
+  .icone-btl {
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
+    display: block;
+    z-index: 1;
+  }
+  
+  /* Barra Lateral */
+  .barra-lateral {
+    position: fixed;
+    top: 13vh;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 13vh);
+    background-color: #043309;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .botoes-bala {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 10px;
+  }
+  
+  /* Estilo para os botões da barra lateral */
+  .btl{
+    display: flex;
+    align-items: center;
+    background-color: #043309;
+    color: #181818;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btl:hover {
+    background-color: #e2c106;
+    color: #f8f8f8;
+  }
+  
+  .icone-btl{
+    width: 30px;
+    height: 30px;
+    right: 5px;
+    top: 15px;
+    position: relative;
+  }
+  
+  /* Estilo para o botão "Sair" */
+  .sair {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+  }
+  
+  .btl-sair {
+    display: flex;
+    align-items: center;
+    background-color: #043309;
+    color: #ffffff;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btl-sair:hover {
+    background-color: #e2c106;
+    color: #ffffff;
+  }
+  
+  .icone-sair {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .texto-sair {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-left: 20px;
+  }
+  
+  

@@ -1,0 +1,222 @@
+body {
+    font-family: 'Sora', Arial, sans-serif;
+    background-color: #043309;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==================== Tela Inicial ==================== */
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: row; /* Elementos lado a lado */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    width: 80%; /* Largura máxima do container */
+    padding: 20px;
+}
+
+/* Conteúdo de Texto */
+.text-content {
+    max-width: 50%; /* Limita a largura do texto */
+}
+
+h1 {
+    font-style: italic;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e8fff4; /* Verde claro */
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.button {
+    background-color: #00ff88;
+    color: #002d19;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00995c;
+    color: #ffffff;
+}
+
+/* Imagem Principal */
+.main-image {
+    max-width: 40%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Logo */
+.header-image {
+    max-width: 130px;
+    position: absolute; /* Fixada no topo */
+    top: 0px;
+    left: 20px;
+    z-index: 10;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .text-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-image {
+        max-width: 80%;
+    }
+}
+
+/* Configuração geral do container */
+.content {
+    display: flex; /* Garante o layout de duas colunas */
+    flex-direction: row; /* Coloca os elementos lado a lado */
+    justify-content: space-between; /* Cria espaço entre o texto e a imagem */
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%; /* Garante que a largura ocupe todo o espaço disponível */
+    gap: 20px; /* Adiciona um espaçamento entre o texto e a imagem */
+}
+
+/* Ajustes responsivos para a classe .content */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Empilha os elementos em telas menores */
+        text-align: center; /* Centraliza os elementos */
+    }
+}
+
+/* Botão "Entrar" no canto superior direito */
+.login-button {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    font-size: 16px;
+    color: #fff; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid #fff; /* Borda branca */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Borda arredondada */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 10; /* Garante que o botão fique acima dos outros elementos */
+}
+
+.login-button:hover {
+    background-color: #fff; /* Fundo branco ao passar o mouse */
+    color: #007B55; /* Cor do texto ao passar o mouse */
+    cursor: pointer;
+}
+
+/* ==================== Tela de Cadastro ==================== */
+
+.cadastro-container {
+    background: #ffffff; /* Fundo branco */
+    color: #002d19; /* Texto escuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Títulos */
+.cadastro-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #004d33;
+    text-align: left;
+}
+
+.cadastro-header p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Campos do Formulário */
+.cadastro-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cadastro-form .form-group {
+    flex: 1 1 45%; /* Responsividade em duas colunas */
+}
+
+.cadastro-form label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.cadastro-form input,
+.cadastro-form select,
+.cadastro-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus,
+.cadastro-form textarea:focus {
+    border: 1px solid #00ff88;
+}
+
+/* Botão */
+.cadastro-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #00ff88;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-form button:hover {
+    background-color: #00995c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-form .form-group {
+        flex: 1 1 100%; /* Coloca os campos em uma única coluna em telas menores */
+    }
+}

@@ -1,0 +1,231 @@
+/* Configurações Globais */
+body {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #003d20, #005432); /* Gradiente de fundo */
+    background-size: 400% 400%; /* Para criar movimento no gradiente */
+    animation: gradientAnimation 15s ease infinite; /* Gradiente animado */
+    position: relative; /* Para os efeitos adicionais */
+    color: #333;
+    overflow-x: hidden; /* Garante que elementos de fundo extras não causem rolagem horizontal */
+}
+
+/* Adicionando flashlights */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 255, 150, 0.2); /* Luz esverdeada suave */
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1; /* Mantém os flashlights atrás do conteúdo */
+    animation: flashlightAnimation 10s infinite alternate;
+}
+
+/* Posição dinâmica dos flashlights */
+body::before {
+    top: 20%;
+    left: 10%;
+}
+
+body::after {
+    bottom: 20%;
+    right: 15%;
+}
+
+/* Animação de gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animação de movimento dos flashlights */
+@keyframes flashlightAnimation {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(50px, -50px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1% 9%;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-image {
+    height: 150px;
+}
+
+/* Formulário */
+.form-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px; /* Separação maior entre seções */
+}
+
+.form-content h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Seções do formulário */
+.form-section {
+    margin-bottom: 50px; /* Mais espaçamento entre seções */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 30px; /* Maior espaçamento abaixo do título */
+    width: 100%; /* Garante alinhamento */
+    border-bottom: 2px solid #00cc88;
+    padding-bottom: 5px;
+}
+
+/* Grupos do formulário */
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Divisão uniforme para 2 colunas */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaço interno entre label e campo */
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #00cc88;
+}
+
+/* Textarea ajustado */
+textarea {
+    resize: none; /* Remove redimensionamento */
+    height: 120px; /* Altura fixa padrão */
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #00cc88;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Separação maior do botão */
+}
+
+button:hover {
+    background-color: #00995c;
+}
+
+/* Seção específica para "Informações da Propriedade" */
+.property-section {
+    margin-top: 60px; /* Separação clara entre "Seus Dados" e "Informações da Propriedade" */
+    padding-top: 40px; /* Espaço interno superior */
+    border-top: 2px solid #00cc88; /* Linha separadora */
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .form-section {
+        gap: 30px; /* Melhor espaçamento para telas maiores */
+    }
+
+    .form-group {
+        flex: 1 1 calc(50% - 30px); /* Divisão uniforme */
+    }
+}
+
+@media (max-width: 767px) {
+    .form-group {
+        flex: 1 1 100%; /* Full-width em telas menores */
+    }
+}
+
+/* Estilo do texto de redirecionamento */
+.already-registered {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+.already-registered .login-link {
+    color: #00cc88;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.already-registered .login-link:hover {
+    color: #00995c;
+    text-decoration: underline;
+}
