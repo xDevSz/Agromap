@@ -147,15 +147,37 @@ table tr:hover {
     border-bottom: none;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Responsividade adicional */
+@media (max-width: 480px) {
     .content {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap; /* Permite empilhar os elementos */
+        justify-content: center; /* Centraliza os itens */
+        padding: 20px; /* Reduz o espaçamento em dispositivos pequenos */
+        gap: 20px; /* Reduz o espaço entre os elementos */
     }
 
     .grafico-area, .vacina-area, .plantio-area {
-        width: 100%;
-        max-width: 350px;
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 300px; /* Limita a largura máxima */
+        padding: 15px; /* Reduz o espaçamento interno */
+        height: auto; /* Remove a altura fixa */
+    }
+
+    .grafico-container {
+        width: 120px; /* Reduz o tamanho do gráfico */
+        height: 120px;
+    }
+
+    table {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte */
+    }
+
+    table th, table td {
+        padding: 5px; /* Reduz o padding nas células */
+    }
+
+    .plantio-area ul li {
+        font-size: 0.85rem; /* Ajusta o tamanho da fonte dos itens da lista */
     }
 }
+

@@ -4,7 +4,6 @@ body {
     font-family: 'Sora', Arial, sans-serif;
     background: linear-gradient(135deg, #0b4026, #18a86b 50%, #0b4026);
     color: #181818;
-    position: relative;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -271,3 +270,102 @@ body {
   }
   
   
+/* Responsividade para a barra lateral */
+@media (max-width: 768px) {
+  .barra-lateral {
+      width: 200px; /* Reduz a largura em dispositivos menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .barra-lateral {
+      width: 150px; /* Largura ainda menor para dispositivos muito pequenos */
+  }
+
+  .btl, .btl-sair {
+      font-size: 0.85rem; /* Reduz o tamanho da fonte dos botões */
+      padding: 10px 15px; /* Ajusta o espaçamento interno */
+  }
+
+  .icone-btl, .icone-sair {
+      width: 25px; /* Reduz o tamanho dos ícones */
+      height: 25px;
+  }
+}
+
+/* Responsividade para o header e barra de pesquisa */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Permite os elementos quebrarem para a próxima linha */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-text {
+        position: relative;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .pesquisa-header {
+        width: 100%; /* Ocupa toda a largura */
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    .barra-pesquisa {
+        width: 100%; /* Largura total dentro do espaço disponível */
+        max-width: 400px; /* Limita o tamanho máximo */
+        padding: 10px 20px 10px 45px;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .icone-lupa {
+        position: absolute;
+        top: 50%;
+        left: 15px; /* Ajusta a posição lateral */
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .botoes-header {
+        width: 100%; /* Ocupa toda a largura */
+        display: flex;
+        justify-content: center; /* Centraliza os botões */
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        width: 35px; /* Botões menores */
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text {
+        font-size: 0.9rem; /* Texto menor */
+    }
+
+    .barra-pesquisa {
+        font-size: 0.85rem; /* Texto menor na barra */
+        padding: 8px 15px 8px 40px;
+    }
+
+    .icone-lupa {
+        width: 18px; /* Ícone ainda menor */
+        height: 18px;
+        left: 12px; /* Ajusta mais para telas pequenas */
+    }
+
+    .botoes-header {
+        flex-wrap: wrap; /* Botões quebram para a próxima linha se necessário */
+        gap: 5px;
+    }
+}
+

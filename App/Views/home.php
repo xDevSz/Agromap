@@ -1,5 +1,5 @@
 <?php include 'includes/main.php'; ?>
-<link rel="stylesheet" href="<?= URL ?>/Public/css/home2.css">
+<link rel="stylesheet" href="<?= URL ?>/Public/css/home3.css">
 
 <div class="content">
     <div class="dashboard-container">
