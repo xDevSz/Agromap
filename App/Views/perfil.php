@@ -1,6 +1,6 @@
 <?php include 'includes/main.php'; ?>
 
-<link rel="stylesheet" href="<?= URL ?>/Public/css/perfil.css">
+<link rel="stylesheet" href="<?= URL ?>/Public/css/perfil2.css">
 
 <div class="perfil-container">
     <div class="perfil-box">
@@ -46,7 +46,6 @@
         </div>
     </div>
 </div>
-
 
 <?php include 'includes/footer.php'; ?>
 

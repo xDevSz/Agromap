@@ -1,32 +1,8 @@
 <?php include 'includes/main.php'; ?>
-<link rel="stylesheet" href="<?= URL ?>/Public/css/home3.css">
+<link rel="stylesheet" href="<?= URL ?>/Public/css/home4.css">
 
 <div class="content">
     <div class="dashboard-container">
-        <!-- Sessão de Gráficos -->
-        <div class="grafico-area">
-            <h2>Gráficos Resumidos</h2>
-            <div class="graficos">
-                <!-- Gráfico de Colheita -->
-                <div class="grafico">
-                    <p class="horario" id="horario-colheita"></p>
-                    <div class="grafico-container">
-                        <div class="grafico" id="grafico-colheita"></div>
-                        <p class="grafico-titulo">Colheita</p>
-                    </div>
-                </div>
-
-                <!-- Gráfico de Vacinação -->
-                <div class="grafico">
-                    <p class="horario" id="horario-vacinacao"></p>
-                    <div class="grafico-container">
-                        <div class="grafico" id="grafico-vacinacao"></div>
-                        <p class="grafico-titulo">Vacinação</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Sessão de Vacinação -->
         <div class="vacina-area">
             <h2>Próximas Vacinações</h2>
@@ -81,3 +57,4 @@
 
 <?php include 'includes/footer.php'; ?>
 <script src="<?= URL ?>/Public/js/home.js"></script>
+

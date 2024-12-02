@@ -1,0 +1,112 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.vacina-area, .plantio-area {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.vacina-area h2, .plantio-area h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #043309;
+    margin-bottom: 15px;
+}
+
+.info-extra {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 15px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+table th, table td {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e2f1e2;
+}
+
+.plantio-area ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plantio-area ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.plantio-area ul li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 480px) {
+    .content {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .vacina-area, .plantio-area {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    table th, table td {
+        padding: 5px;
+    }
+
+    .plantio-area ul li {
+        font-size: 0.85rem;
+    }
+}
+

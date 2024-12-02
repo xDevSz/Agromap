@@ -90,7 +90,6 @@ button.delete-item:hover {
 }
 
 /* Área de exibição (Estoque e Máquinas) */
-#estoque-display,
 #machine-display {
     padding: 20px;
     border: 2px solid #18a86b;
@@ -99,7 +98,6 @@ button.delete-item:hover {
     margin-top: 20px;
 }
 
-#estoque-list,
 #machines-list {
     display: flex;
     flex-wrap: wrap; /* Quebra de linha para itens */
@@ -108,7 +106,6 @@ button.delete-item:hover {
 }
 
 /* Estilo para os itens exibidos */
-.estoque-item,
 .machine-item {
     flex: 1 1 calc(25% - 20px); /* Ocupa até 25% da largura disponível */
     min-width: 200px;
@@ -123,7 +120,6 @@ button.delete-item:hover {
     justify-content: space-between;
 }
 
-.estoque-item p,
 .machine-item p {
     margin: 5px 0;
     font-size: 0.9rem;
@@ -134,13 +130,7 @@ button.delete-item:hover {
     color: #0b4026;
 }
 
-.estoque-item:last-child,
-.machine-item:last-child {
-    border-bottom: none;
-}
-
 /* Mensagem quando não há itens */
-#estoque-list p,
 #machines-list p {
     font-size: 1rem;
     color: #666;
@@ -151,14 +141,12 @@ button.delete-item:hover {
 
 /* Ajustes para dispositivos menores */
 @media (max-width: 768px) {
-    .estoque-item,
     .machine-item {
         flex: 1 1 calc(50% - 20px); /* Ocupa 50% em telas menores */
     }
 }
 
 @media (max-width: 480px) {
-    .estoque-item,
     .machine-item {
         flex: 1 1 100%; /* Ocupa 100% em telas muito pequenas */
     }

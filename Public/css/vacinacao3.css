@@ -3,19 +3,19 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh; /* Garante que o fundo ocupa toda a altura da tela */
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.137); /* Altere para o mesmo fundo do CSS original */
-    padding: 0; /* Remove qualquer padding extra */
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.137);
+    padding: 20px;
+    box-sizing: border-box; /* Garante que padding seja incluso no tamanho total */
 }
-
 
 /* Contêiner principal */
 .vacina-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     background-color: white;
     border-radius: 15px;
@@ -24,24 +24,13 @@
     gap: 30px;
 }
 
-/* Remoção de bordas e áreas extras */
-.vacina-container {
-    border: none; /* Remove bordas indesejadas */
-    margin: 0; /* Remove margens */
-    overflow: hidden; /* Garante que apenas o conteúdo dentro seja visível */
-}
-
 /* Formulário */
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 1;
-}
-
-.formulario h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    flex: 1 1 45%;
+    min-width: 300px;
 }
 
 .campo label {
@@ -61,7 +50,6 @@
 .botao-container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
 }
 
 .confirmar {
@@ -81,44 +69,40 @@
 }
 
 /* Área de visualização */
-/* Área de visualização */
 .visualizacao {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex: 1 1 45%;
+    min-width: 300px;
 }
 
-.visualizacao h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-table {
+.visualizacao table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 15px; /* Arredonda os cantos da tabela */
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona leve destaque */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-table thead th {
+.visualizacao thead th {
     background-color: #28a745;
     color: white;
     padding: 10px;
     text-align: left;
-    font-size: 1rem;
 }
 
-table tbody td {
+.visualizacao tbody td {
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
 
-table tbody tr:last-child td {
-    border-bottom: none; /* Remove a borda inferior da última linha */
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .vacina-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-table tbody tr:hover {
-    background-color: #f2f2f2;
+    .formulario,
+    .visualizacao {
+        flex: 1 1 100%;
+    }
 }

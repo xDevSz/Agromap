@@ -1,5 +1,5 @@
 <?php include 'includes/main.php'; ?>
-<link rel="stylesheet" href="<?= URL ?>/Public/css/maquinario3.css">
+<link rel="stylesheet" href="<?= URL ?>/Public/css/maquinario4.css">
 
 <div class="content">
     <h1>Gerenciar Máquinas Agrícolas</h1>
